@@ -82,15 +82,22 @@ js('ext_tune(1300, "am", 0);')
 | NBFM | `"nbfm"` | Narrowband FM |
 | IQ | `"iq"` | Raw I/Q data for external decoders |
 
-**Zoom** — 0 = full 30 MHz span, higher = more zoomed. Range: 0–14.
+**Zoom** — The third argument (`zoom_level`) in `ext_tune` is ignored or unreliable in the KiwiSDR JS API. Keep it as `0` and use the dedicated zoom functions instead.
+
+### Zoom Control API (Use These Instead)
+To control and query the waterfall zoom level:
+*   **Read Zoom Level**: Read the global variable `zoom_level`.
+*   **Zoom In/Out**: Call `zoom_step(N)` where `N` is the number of steps (positive to zoom in, negative to zoom out).
+*   **Reset Zoom**: Call `zoom_step(-zoom_level)` to zoom all the way out (reset to zoom 0 / full 30 MHz span).
 
 ### Other JS API Functions
 | Function | Purpose |
 |----------|---------|
-| `ext_tune(freq, mode, zoom)` | **PRIMARY** — tunes frequency, sets mode, adjusts zoom |
+| `ext_tune(freq, mode, 0)` | **PRIMARY** — tunes frequency and sets mode (keep zoom as 0) |
+| `zoom_step(N)` | Adjust zoom relatively (positive = zoom in, negative = zoom out) |
+| `zoom_level` | Global variable storing current zoom level (0 to 14) |
 | `freqset_complete(freq_kHz)` | Set frequency only (no mode change) |
 | `snd_send(cmd_string)` | Send raw command to sound channel |
-| `freq_car_Hz` | Current carrier frequency in Hz (read/write) |
 | `owrx` | Main receiver state object |
 
 ### KiwiClient Python API (External Control)

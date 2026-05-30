@@ -112,7 +112,132 @@ js('ext_tune(5000, "am", 0);')
 
 ---
 
+## SIG-003 — Radio Havana Cuba / RHC (Havana, Cuba)
+
+### Signal Metadata
+| Field | Value |
+|-------|-------|
+| **Signal ID** | SIG-003 |
+| **Status** | ✅ CONFIRMED |
+| **Timestamp** | 2026-05-30 01:53 EDT / 05:53 UTC |
+| **Frequency** | 7435.00 kHz (found at 7433.67, recentered) |
+| **Mode** | AM |
+| **Band** | 41m (HF Shortwave) |
+
+### Station Info
+| Field | Value |
+|-------|-------|
+| **Call Sign** | RHC |
+| **Branding** | Radio Habana Cuba |
+| **Format** | State broadcasting — Spanish-language programming |
+| **Operator** | Cuban government (ICRT) |
+| **Licensed To** | Havana, Cuba |
+| **Power** | 250 kW |
+| **Language** | Spanish |
+
+### Receiver
+| Field | Value |
+|-------|-------|
+| **KiwiSDR** | KB8VUC |
+| **Receiver Location** | Wayland, MI, USA (EN72er) |
+| **Antenna** | 9:1 End Fed |
+| **Distance to TX** | ~1,200 miles (Wayland → Havana) |
+| **Propagation** | Skywave — ionospheric F-layer bounce, nighttime |
+
+### Signal Quality
+| Field | Value |
+|-------|-------|
+| **Quality** | Clear voice audio, readable Spanish |
+
+### Tuning Command
+```javascript
+js('ext_tune(7435, "am", 0);')
+```
+
+### Notes
+- First international signal — picking up Cuba from Michigan
+- Discovered at 7433.67 kHz (1.3 kHz off center), recentered to 7435
+- 250 kW transmitter — one of the most powerful shortwave broadcasters in the Western Hemisphere
+- Beams Spanish programming toward North America overnight
+- Proves HF skywave propagation is working — ionospheric bounce confirmed over 1,200 miles
+
+---
+
+<!-- WRMI -->
+## SIG-004 — WRMI Radio Miami International (Okeechobee, FL)
+
+### Signal Metadata
+| Field | Value |
+|-------|-------|
+| **Signal ID** | SIG-004 |
+| **Status** | ✅ CONFIRMED |
+| **Timestamp** | 2026-05-30 01:59 EDT / 05:59 UTC |
+| **Frequency** | 9395.00 kHz (found at 9394.79) |
+| **Mode** | AM |
+| **Band** | 31m (HF Shortwave) |
+
+### Station Info
+| Field | Value |
+|-------|-------|
+| **Call Sign** | WRMI |
+| **Branding** | Radio Miami International |
+| **Format** | Relay broadcaster — third-party programs |
+| **Licensed To** | Okeechobee, FL, USA |
+| **Power** | 100 kW |
+
+### Receiver
+| Field | Value |
+|-------|-------|
+| **KiwiSDR** | KB8VUC |
+| **Receiver Location** | Wayland, MI, USA (EN72er) |
+| **Distance to TX** | ~1,100 miles |
+| **Propagation** | Skywave — nighttime F-layer bounce |
+
+### Notes
+- Also broadcasts on 5850, 7570, 9455 kHz
+- Sells airtime to organizations worldwide
+- 31m band strong from MI to Florida at night
+
+---
+
+## SIG-005 — BBC World Service (United Kingdom)
+
+### Signal Metadata
+| Field | Value |
+|-------|-------|
+| **Signal ID** | SIG-005 |
+| **Status** | ✅ CONFIRMED |
+| **Timestamp** | 2026-05-30 02:04 EDT / 06:04 UTC |
+| **Frequency** | 9410.00 kHz (found at 9409.92) |
+| **Mode** | AM |
+| **Band** | 31m (HF Shortwave) |
+
+### Station Info
+| Field | Value |
+|-------|-------|
+| **Branding** | BBC World Service |
+| **Format** | News / Current Affairs — English |
+| **Operator** | British Broadcasting Corporation |
+| **TX Site** | Woofferton, England |
+| **Power** | 250 kW |
+
+### Receiver
+| Field | Value |
+|-------|-------|
+| **KiwiSDR** | KB8VUC |
+| **Receiver Location** | Wayland, MI, USA (EN72er) |
+| **Distance to TX** | ~3,800 miles — transatlantic |
+| **Propagation** | Multi-hop skywave across Atlantic |
+
+### Notes
+- First transatlantic signal — England to Michigan
+- BBC World Service is the most listened-to international broadcaster
+- 3,800+ miles via 2-3 ionospheric bounces across the Atlantic Ocean
+
+---
+
 <!-- TEMPLATE FOR NEW ENTRIES
+
 
 ## SIG-XXX — [Station Name]
 
