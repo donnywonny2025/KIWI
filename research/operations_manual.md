@@ -346,14 +346,25 @@ Radio waves bounce off charged layers of atmosphere 50–300 miles up. The sun c
 
 ## Screenshot Protocol
 
-All screenshots saved to `/Volumes/WORK 2TB/KIWI/screenshots/` with format:
-```
-kiwisdr_YYYY-MM-DD_HH-MM_description.png
+### CRITICAL: Native macOS Screencapture Only
+
+**DO NOT** use Chrome DevTools Protocol `Page.captureScreenshot` (via browser-harness `capture_screenshot()`). Because KiwiSDR renders its waterfall using WebGL/2D canvas elements, background tab throttling in Chrome causes the canvas backbuffer to be discarded, rendering the waterfall area completely black in CDP screenshots.
+
+**ALWAYS** capture using the native macOS `screencapture` utility to grab the physical screen buffer exactly as seen by the user:
+```bash
+# Capture full display to artifacts directory
+screencapture -x /Users/jeffkerr/.gemini/antigravity-ide/brain/<conversation-id>/mac_capture.png
+
+# Copy and rename to screenshots folder in workspace
+cp /Users/jeffkerr/.gemini/antigravity-ide/brain/<conversation-id>/mac_capture.png "/Volumes/WORK 2TB/KIWI/screenshots/kiwisdr_YYYY-MM-DD_HH-MM_description_mac.png"
 ```
 
-Example: `kiwisdr_2026-05-30_01-17_wood1300am.png`
+All screenshots must be saved to `/Volumes/WORK 2TB/KIWI/screenshots/` with the format:
+`kiwisdr_YYYY-MM-DD_HH-MM_description_mac.png`
 
-Take a fresh capture every time the user checks in.
+Example: `kiwisdr_2026-05-30_08-40_rhc6100am_mac.png`
+
+Take a fresh capture every time the frequency changes or the user checks in.
 
 ---
 
