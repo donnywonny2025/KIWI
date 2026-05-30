@@ -408,6 +408,59 @@ js('ext_tune(11930, "sam", 0);')
 
 ---
 
+## SIG-009 — Reach Beyond Australia (Kununurra, WA)
+
+### Signal Metadata
+| Field | Value |
+|-------|-------|
+| **Signal ID** | SIG-009 |
+| **Status** | ✅ CONFIRMED |
+| **Timestamp** | 2026-05-30 09:49 EDT / 13:49 UTC |
+| **Frequency** | 11900.00 kHz (tuned to 11899.90 kHz for best AM reception) |
+| **Mode** | AM |
+| **Band** | 25m (HF Shortwave) |
+
+### Station Info
+| Field | Value |
+|-------|-------|
+| **Call Sign** | Reach Beyond Australia (formerly HCJB Australia) |
+| **Format** | Christian / International Broadcast (English) |
+| **Operator** | Reach Beyond Association |
+| **TX Site** | Kununurra, Western Australia |
+| **Power** | 100 kW |
+| **Language** | English (Australian voice) |
+
+### Receiver
+| Field | Value |
+|-------|-------|
+| **KiwiSDR** | KB8VUC |
+| **Receiver Location** | Wayland, MI, USA (EN72er) |
+| **Antenna** | 9:1 End Fed |
+| **Distance to TX** | ~10,020 miles (16,125 km) |
+| **Propagation** | Multi-hop skywave across the Pacific Ocean |
+
+### Signal Quality
+| Field | Value |
+|-------|-------|
+| **S-Meter** | -74.2 dBm |
+| **Quality** | Weak but readable; user confirmed hearing clear Australian accented voice programming. |
+
+### Tuning Command
+```javascript
+js('ext_tune(11900, "am", 0);') // User optimized to 11899.90 kHz
+```
+
+### Screenshots
+- `screenshots/kiwisdr_2026-05-30_09-45-49_manual_capture_mac.png`
+- `screenshots/kiwisdr_2026-05-30_09-49-31_manual_capture_mac.png`
+
+### Notes
+- Massive 10,000+ mile DX reception!
+- The station switched from Hindi to English at 13:45 UTC (9:45 AM EDT), and the user immediately noted the Australian voice.
+- Tuning to 11899.90 kHz (40 Hz below the nominal carrier) was verified by the user as providing the cleanest audio.
+
+---
+
 <!-- TEMPLATE FOR NEW ENTRIES
 
 
