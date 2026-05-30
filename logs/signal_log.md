@@ -354,6 +354,60 @@ js('ext_tune(9805, "am", 0);')
 
 ---
 
+## SIG-008 — Radio Martí (Greenville, NC)
+
+### Signal Metadata
+| Field | Value |
+|-------|-------|
+| **Signal ID** | SIG-008 |
+| **Status** | ✅ CONFIRMED |
+| **Timestamp** | 2026-05-30 09:25 EDT / 13:25 UTC |
+| **Frequency** | 11930.00 kHz |
+| **Mode** | SAM |
+| **Band** | 25m (HF Shortwave) |
+
+### Station Info
+| Field | Value |
+|-------|-------|
+| **Call Sign** | Radio Martí |
+| **Format** | US government-funded international broadcast (Spanish) |
+| **Operator** | U.S. Agency for Global Media (USAGM) |
+| **TX Site** | Greenville Transmitting Station, North Carolina, USA |
+| **Target Area** | Cuba |
+| **Power** | 250 kW |
+| **Language** | Spanish |
+
+### Receiver
+| Field | Value |
+|-------|-------|
+| **KiwiSDR** | KB8VUC |
+| **Receiver Location** | Wayland, MI, USA (EN72er) |
+| **Antenna** | 9:1 End Fed |
+| **Distance to TX** | ~650 miles |
+| **Propagation** | Skywave — daytime ionospheric reflection |
+
+### Signal Quality
+| Field | Value |
+|-------|-------|
+| **S-Meter** | -38.3 dBm (S9+40 dB) |
+| **Quality** | Booming signal; extremely clear Spanish voice broadcast in SAM mode. |
+
+### Tuning Command
+```javascript
+js('ext_tune(11930, "sam", 0);')
+```
+
+### Screenshots
+- `screenshots/kiwisdr_2026-05-30_09-17_11930am_wrmi_11930_mac.png`
+- `screenshots/kiwisdr_2026-05-30_09-21-26_manual_capture_mac.png`
+
+### Notes
+- Centered at 11930 kHz, resulting in excellent clarity with a locked SAM carrier.
+- User confirmed hearing Spanish broadcast clearly at this frequency.
+- Transmitted from the Greenville, NC site at 250 kW, providing outstanding propagation into Michigan.
+
+---
+
 <!-- TEMPLATE FOR NEW ENTRIES
 
 
