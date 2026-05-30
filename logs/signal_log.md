@@ -172,8 +172,8 @@ js('ext_tune(7435, "am", 0);')
 | **Signal ID** | SIG-004 |
 | **Status** | ✅ CONFIRMED |
 | **Timestamp** | 2026-05-30 01:59 EDT / 05:59 UTC |
-| **Frequency** | 9395.00 kHz (found at 9394.79) |
-| **Mode** | AM |
+| **Frequency** | 9395.00 kHz |
+| **Mode** | AM / SAM |
 | **Band** | 31m (HF Shortwave) |
 
 ### Station Info
@@ -184,19 +184,33 @@ js('ext_tune(7435, "am", 0);')
 | **Format** | Relay broadcaster — third-party programs |
 | **Licensed To** | Okeechobee, FL, USA |
 | **Power** | 100 kW |
+| **Program Confirmed** | 📡 **Supreme Master Television** (brokered airtime block) — Spiritual and lifestyle programming by the Supreme Master Ching Hai Association. Slogan: *"Be Vegan, Make Peace"* (heard as *"Be Vegan, Keep Peace"*). |
 
 ### Receiver
 | Field | Value |
 |-------|-------|
 | **KiwiSDR** | KB8VUC |
 | **Receiver Location** | Wayland, MI, USA (EN72er) |
+| **Antenna** | 9:1 End Fed |
 | **Distance to TX** | ~1,100 miles |
 | **Propagation** | Skywave — nighttime F-layer bounce |
 
+### Signal Quality
+| Field | Value |
+|-------|-------|
+| **S-Meter** | -55.6 dBm (S9) |
+| **Quality** | Strong and clear in SAM mode — locks carrier, minimizes fading |
+
+### Screenshots
+- `screenshots/kiwisdr_2026-05-30_02-30_wrmi9395_active.png`
+- `screenshots/kiwisdr_2026-05-30_02-38_wrmi9395_clear.png`
+
 ### Notes
-- Also broadcasts on 5850, 7570, 9455 kHz
-- Sells airtime to organizations worldwide
-- 31m band strong from MI to Florida at night
+- Also broadcasts on 5850, 7570, 9455 kHz.
+- Sells airtime blocks to religious, cultural, and political organizations worldwide.
+- **02:35 EDT**: Switched from AM to SAM (Synchronous AM) to resolve fading.
+- **02:38 EDT**: Confirmed program identification: *"One World of Peace Through Music, part 11 of 11"* broadcast by Supreme Master Television (a spiritual group promoting peace, vegetarianism, classical music, and spiritual lectures on God). Fits the user's report of hearing ballroom atmosphere, laughing, solo classical piano, and talks about God.
+- 31m band shows excellent skywave propagation from south-central Florida to rural Michigan at night.
 
 ---
 
@@ -233,6 +247,110 @@ js('ext_tune(7435, "am", 0);')
 - First transatlantic signal — England to Michigan
 - BBC World Service is the most listened-to international broadcaster
 - 3,800+ miles via 2-3 ionospheric bounces across the Atlantic Ocean
+
+---
+
+## SIG-006 — WWV 10 MHz (Fort Collins, CO)
+
+### Signal Metadata
+| Field | Value |
+|-------|-------|
+| **Signal ID** | SIG-006 |
+| **Status** | ✅ CONFIRMED |
+| **Timestamp** | 2026-05-30 08:16 EDT / 12:16 UTC |
+| **Frequency** | 10000.00 kHz |
+| **Mode** | AM |
+| **Band** | 30m (HF) |
+
+### Station Info
+| Field | Value |
+|-------|-------|
+| **Call Sign** | WWV |
+| **Operator** | NIST (National Institute of Standards and Technology) |
+| **Format** | Time signal — ticks every second, voice every minute |
+| **Licensed To** | Fort Collins, CO, USA |
+| **Power** | 10 kW |
+
+### Receiver
+| Field | Value |
+|-------|-------|
+| **KiwiSDR** | KB8VUC |
+| **Receiver Location** | Wayland, MI, USA (EN72er) |
+| **Antenna** | 9:1 End Fed |
+| **Distance to TX** | ~1,200 miles |
+| **Propagation** | Skywave — daytime F-layer reflection |
+
+### Signal Quality
+| Field | Value |
+|-------|-------|
+| **S-Meter** | -63.7 dBm (S8-S9) |
+| **Quality** | Strong carrier with time ticks and voice; some atmospheric static but fully readable. |
+
+### Tuning Command
+```javascript
+js('ext_tune(10000, "am", 0);')
+```
+
+### Screenshots
+- `screenshots/kiwisdr_2026-05-30_08-16_wwv10000am.png`
+
+### Notes
+- Confirmed very strong reception during the morning.
+- S-meter reading of -63.7 dBm makes this one of the strongest HF skywave signals received so far.
+- Ticks and voice announcements are fully readable, indicating excellent propagation conditions on the 30-meter band.
+
+---
+
+## SIG-007 — Radio Martí (Greenville, NC)
+
+### Signal Metadata
+| Field | Value |
+|-------|-------|
+| **Signal ID** | SIG-007 |
+| **Status** | ✅ CONFIRMED |
+| **Timestamp** | 2026-05-30 08:20 EDT / 12:20 UTC |
+| **Frequency** | 9805.00 kHz |
+| **Mode** | AM |
+| **Band** | 31m (HF Shortwave) |
+
+### Station Info
+| Field | Value |
+|-------|-------|
+| **Call Sign** | Radio Martí |
+| **Format** | US government-funded international broadcast (Spanish) |
+| **Operator** | U.S. Agency for Global Media (USAGM) |
+| **TX Site** | Greenville Transmitting Station, North Carolina, USA |
+| **Target Area** | Cuba |
+| **Power** | 250 kW |
+| **Language** | Spanish |
+
+### Receiver
+| Field | Value |
+|-------|-------|
+| **KiwiSDR** | KB8VUC |
+| **Receiver Location** | Wayland, MI, USA (EN72er) |
+| **Antenna** | 9:1 End Fed |
+| **Distance to TX** | ~650 miles |
+| **Propagation** | Skywave — daytime ionospheric reflection |
+
+### Signal Quality
+| Field | Value |
+|-------|-------|
+| **S-Meter** | -55.0 dBm (S9+) |
+| **Quality** | Strong, clear Spanish programming; booming carrier. |
+
+### Tuning Command
+```javascript
+js('ext_tune(9805, "am", 0);')
+```
+
+### Screenshots
+- `screenshots/kiwisdr_2026-05-30_08-20_radiomarti9805am.png`
+
+### Notes
+- Discovered initially as an adjacent carrier while tuned to 9810 kHz.
+- Centered at 9805 kHz, resulting in excellent clarity and a strong S9+ S-meter reading of -55.0 dBm.
+- Radio Martí transmits from the massive USAGM facilities in Greenville, NC, targeting Cuba with news, talk, and music. The relatively close proximity (650 miles) and high transmitter power (250 kW) result in an exceptionally clean signal in Michigan during the morning.
 
 ---
 

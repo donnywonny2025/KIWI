@@ -13,6 +13,7 @@ Stations we have successfully received and identified. Sorted by frequency.
 | Call | Freq (kHz) | Mode | Format | Location | Owner | Signal | Dist | Sig ID |
 |------|-----------|------|--------|----------|-------|--------|------|--------|
 | **WWV** | 5000 | AM | Time signal | Fort Collins, CO | NIST | S4 (-75.4 dBm) | ~1200 mi | SIG-002 |
+| **WWV** | 10000 | AM | Time signal | Fort Collins, CO | NIST | S9 (-63.7 dBm) | ~1200 mi | SIG-006 |
 | **RHC** | 7435 | AM | State (Spanish) | Havana, Cuba | ICRT | Clear | ~1200 mi | SIG-003 |
 | **WRMI** | 9395 | AM | Relay / Music | Okeechobee, FL | WRMI | S9 (-55.6 dBm) | ~1100 mi | SIG-004 |
 | **BBC** | 9410 | AM | News (English) | Woofferton, UK | BBC | Clear | ~3800 mi | SIG-005 |
